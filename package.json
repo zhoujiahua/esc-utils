@@ -6,14 +6,22 @@
   "author": "jerry.zhou",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node ./src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "start": "nodemon --watch src/**/*.ts --exec \"ts-node\" src/app.ts",
+    "dev": "ts-node ./src/app.ts",
     "build": "tsc ./src"
   },
   "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/js-cookie": "^3.0.1",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15",
+    "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.1"
   }
 }
