@@ -1,3 +1,5 @@
 import runLog from "./modules/Base";
+import { Demo } from "./modules/ClassType";
 const count: number = 123;
-console.log(count, runLog());
+const demo = Demo.getInstance();
+console.log(count, demo.name, runLog());

@@ -18,10 +18,10 @@ const objectArr2: Teacher[] = [
 ];
 
 // 元组 tuple 类型和长度固定
-const teacherInfo: [string, string, number] = ["jerry", "male", 18];
+export const teacherInfo: [string, string, number] = ["jerry", "male", 18];
 
 // CSV 文件
-const teacherList: [string, string, number][] = [
+export const teacherList: [string, string, number][] = [
   ["jerry", "male", 18],
   ["tom", "male", 18],
   ["lance", "male", 18],
