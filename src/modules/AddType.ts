@@ -16,3 +16,14 @@ export const dataArry: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 export const calculateSum: (a: number, b: number) => number = (a, b) => {
   return a + b;
 };
+
+let temp: number | string = 0;
+temp = "None";
+
+const func1 = ({ str }: { str: string }) => {
+  return parseInt(str, 10);
+};
+
+const func2: ({ str }: { str: string }) => number = ({ str }) => {
+  return parseInt(str, 10);
+};

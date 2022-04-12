@@ -10,3 +10,8 @@ export function calculateSum(a: number, b: number): number {
 }
 
 const sum = calculateSum(secondNumber, fisrtNumber);
+
+const objData = {
+  name: "jerry",
+  age: 18,
+};
