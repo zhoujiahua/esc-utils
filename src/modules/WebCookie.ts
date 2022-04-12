@@ -4,11 +4,11 @@ export default class WebCookie {
   constructor() {}
 
   // Register VM method
-  static install(vm) {
+  static install(vm: any): void {
     vm.prototype["$wc"] = this;
   }
 
-  static _extension(ext = {}) {
+  static _extension(ext: any = {}): any {
     ext.expires = ext.expires || 7;
     ext.path = ext.expires || "/";
     ext.domain = ext.domain || "/";
@@ -16,15 +16,13 @@ export default class WebCookie {
     return ext;
   }
 
-  static setCookie(name, value, ext = {}, space = false) {
+  static setCookie(name: string, value: any, ext = {}): any {
     if (!name) return false;
     ext = this._extension(ext);
-    if (!space) return Cookies.set(name, value, ext);
-    let spaceCookie = Cookies.noConflict();
-    return spaceCookie.set(name, value, ext);
+    return Cookies.set(name, value, ext);
   }
 
-  static getCookie(name) {
+  static getCookie(name: string): any {
     if (!name) return false;
     let data = Cookies.get(name) || "";
     if (
@@ -35,7 +33,7 @@ export default class WebCookie {
     return data;
   }
 
-  static removeCookie(name, ext = {}) {
+  static removeCookie(name: string, ext = {}): any {
     if (!name) return false;
     ext = this._extension(ext);
     return Cookies.remove(name, ext);
